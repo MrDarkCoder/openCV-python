@@ -101,7 +101,7 @@ class HandDetector:
 
     def handType(self):
         if self.results.multi_hand_landmarks:
-            if self.lmList[17][0] < self.lmList[5][0]:
+            if self.landMarks[17][0] < self.landMarks[5][0]:
                 return "Right"
             else:
                 return "Left"

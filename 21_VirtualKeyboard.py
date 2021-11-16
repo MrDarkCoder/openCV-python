@@ -41,6 +41,7 @@ class Button:
 
 
 def drawAll(img, buttonList):
+
     for button in buttonList:
         x, y = button.position
         w, h = button.size
@@ -69,7 +70,7 @@ buttonList = []
 
 for i in range(len(keys)):
     for j, key in enumerate(keys[i]):
-        buttonList.append(Button([100 * j + 150, 100 * i + 100], key))
+        buttonList.append(Button([100 * j + 50, 100 * i + 50], key))
 
 finalText = ""
 
@@ -100,6 +101,7 @@ while True:
 
                 # clicked
                 if length < 15:
+                    print("clicked")
                     keyBoard.press(button.text)
                     cv2.rectangle(img, button.position, (x + w, y + h), (0, 255, 0), cv2.FILLED)
                     cv2.putText(img, button.text, (x + 20, y + 65), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
