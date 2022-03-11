@@ -51,8 +51,8 @@ def drawAll(img, buttonList):
     return img
 
 
-frameWidth = 1280
-frameHeight = 720
+frameWidth = 1920
+frameHeight = 850
 cap = cv2.VideoCapture(0)
 cap.set(3, frameWidth)
 cap.set(4, frameHeight)
